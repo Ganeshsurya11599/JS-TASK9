@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Show Details</title>
+	 <meta charset="utf-8">
+	   <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.7.0/css/all.css' integrity='sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ' crossorigin='anonymous'>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/style1.css">
+</head>
+<body>
+	<br>
+	<br>
+	<div class="container">
+		<br>
+		<div class="row">
+			<div class="col-lg-12">
+				<table class="table table-striped table-bordered text-info table-hover">
+					<thead>
+						<tr>
+						<th>Name</th>
+						<th>D.O.B</th>
+						<th>Age</th>
+						<th>Blood Group</th>
+						<th>Qualification</th>
+					</tr>
+					</thead>
+					<tbody id="body">
+						<tr>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+					</tr>
+					</tbody>	
+				</table>
+			</div>
+		</div>
+	</div>
+
+	<script type="text/javascript">
+		var table=JSON.parse(localStorage.getItem('user1'));
+		console.log(table);
+
+		for(var i=0;i<table.length;i++){
+			console.log(table[i]);
+			document.getElementById('body').innerHTML += '<tr><td>'+table[i].name+'</td>'+'<td>'+table[i].dob+'</td>'+'<td>'+table[i].age+'</td>'+'<td>'+table[i].bloodgroup+'</td>'+'<td>'+table[i].qualification+'</td></tr>';
+		}
+		console.log(body);
+	</script>
+</body>
+</html>
